@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+</head>
+<body>
+
+<p>888-554-0640</p>
+
+<script type="text/javascript">
+var ruleset_mm_mobile = { 
+	"rules":[ 
+		["device", "is", "mobile"] 
+	], 
+	"actions":[ 
+		{"set_custom_var":["1","mobile"]} 
+	] 
+};
+</script>
+<script> 
+(function(m, o, n, g, j, s){m['MongMObject'] = j; m[j] = m[j] || function(){ 
+(m[j].q = m[j].q || []).push(arguments)}, d = 1 * new Date(); m[j].l = d; a = o.createElement(n), 
+b = o.getElementsByTagName(n)[0]; a.async = 1; a.src = g + '?t=' + d; b.parentNode.insertBefore(a, b) 
+})(window, document, 'script', '//www.mongoosemetrics.com/jsfiles/js-correlation/mm-engine.js', 'mm_options');
+mm_options('enable_session'); 
+mm_options('add_ruleset', ruleset_mm_mobile);
+mm_options('default_cc', 'c39ebd556dde312690e7aa96ea96e9c5');
+mm_options('set_custom', '2', 'get_url_var', 'gclid');
+mm_options('set_custom', '3', 'get_url_var', 'utm_campaign');
+mm_options('execute'); 
+</script>
+
+</body>
+</html>
