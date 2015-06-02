@@ -77,10 +77,10 @@ function custom_replace() {
         var remain = numToFindS.substring(6,10);
         var exchangeCombo = exchange + remain;
     }
-    //alert (areaCode);
-    //alert (exchange);
-    //alert (remain);
-    //alert (exchangeCombo);
+    alert (areaCode);
+    alert (exchange);
+    alert (remain);
+    alert (exchangeCombo);
     iterationS[0] = "\\(\\s?"+areaCode+"\\s?\\)[\\-\\.\\s]?"+exchange+"[\\-\\.\\s]?"+remain+"(?!\\d)(?=[<\\s\\.\\!\\?\\,]?)";
     iterationS[1] = "\\b"+areaCode+"\\s?[\\-\\.\\s]?"+exchange+"[\\-\\.\\s]?"+remain+"\\b(?!\\d)(?=[<\\s\\.\\!\\?\\,]?)";
     iterationS[2] = "\\b("+areaCode+"|"+areaCode2+")\\s("+exchange+"|"+exchange2+")\\s("+remain+"|"+remain2+")\\b(?!\\d)(?=[<\\s\\.\\!\\?\\,]?)";
