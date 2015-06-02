@@ -88,14 +88,15 @@ function custom_replace() {
     var iCountS = iterationS.length - 1;
     for (i=0;i<=iCountS;i++){
         if (i == 0){
-            fullExpressionS = iterationS[i];            
+            fullExpressionS = iterationS[i];
+            alert (fullExpression);            
         }else{
 
 
             fullExpressionS = fullExpressionS + "|" + iterationS[i];
         }
     }
-    alert (fullExpression);
+    
     inputS = new RegExp(fullExpressionS,"gi"); 
     if (numberFormatS > -1){
         outputS = formatnumber(numToInsertS,numberFormatS);
