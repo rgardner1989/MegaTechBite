@@ -13,8 +13,6 @@
 <script type="text/javascript">
 var MONGOOSE_CAMPAIGN_ID = 'DE742FCB37DA9AFD3A22B249874EB7D9',
 MONGOOSE_DEFAULT_NUMBER = '8667856255',
-
-    
 MONGOOSE_KEYWORD = "mdmd_view",
 MDMD_CAMPAIGN_ID = '522114',
 MDMD_CONVERSION_TAG_ID = '381335',
@@ -33,12 +31,12 @@ document.write(unescape("%3Cscript src='"+mdmd_protocol+"ds.serving-sys.com/burs
 b = o.getElementsByTagName(n)[0]; a.async = 1; a.src = g + '?t=' + d; b.parentNode.insertBefore(a, b)
 })(window, document, 'script', '//www.mongoosemetrics.com/jsfiles/js-correlation/mm-engine.min.js', 'mm_options');
 mm_options('default_cc', MONGOOSE_CAMPAIGN_ID);
-mm_options('default_number', MONGOOSE_DEFAULT_NUMBER)
+mm_options('default_number', MONGOOSE_DEFAULT_NUMBER);
  
 mm_options('set_custom','1', MDMD_CONVERSION_TAG_ID);
 if(typeof usercookie !== "undefined"){
 mm_options('set_custom','2', usercookie);
-}
+};
  
 mm_options('enable_integration','optimizely','3');
 // mm_options('enable_session');  //Enable Session
