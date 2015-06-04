@@ -10,78 +10,39 @@
 <p>CUSTOM NUMBER FORMAT: 1-800-DAY-NITE</p>
 <p>admin@800daynite.com</p>
 
-<!-- Begin Mongoose Metrics Tracking Code -->
 <script type="text/javascript">
-var mm_c = 'd986c45ee7c6bdf8ddd08b18223a127a';
-var mm_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");
+var MONGOOSE_CAMPAIGN_ID = 'DE742FCB37DA9AFD3A22B249874EB7D9',
+MONGOOSE_DEFAULT_NUMBER = '8667856255',
+
+    
+MONGOOSE_KEYWORD = "mdmd_view",
+MDMD_CAMPAIGN_ID = '522114',
+MDMD_CONVERSION_TAG_ID = '381335',
+CUSTOM_KEYWORD = '',
+APPEND_KEYWORD = true,
+APPEND_KEYWORD_DELIM = ";",
+DEBUG = false;
+      
+var mdmd_protocol = (("https:" == document.location.protocol) ? "https://secure-" : "http://");
+document.write(unescape("%3Cscript src='"+mdmd_protocol+"ds.serving-sys.com/burstingres/CustomScripts/mongoose_cust_loader_v2.js'%3E%3C/script%3E"));
 </script>
-<script src="http://www.mongoosemetrics.com/jsfiles/js-correlation/mm-getvar.js">
-</script>
-<script type="text/javascript">
-/* Custom Parameters */
-/* MANDATORY default_number Setup Parameter DO NOT REMOVE */
-var default_number=''; /* 10 Digits Only i.e. 8881234567 */
-var overwrite_default_number='N';
-var mm_debug = 1;
-/* Custom Parameters */
-</script>
-<script type="text/javascript">
-(function() {
-var mm = document.createElement('script'); mm.type = 'text/javascript'; mm.async = 'true';
-mm.src = unescape(mm_protocol + 'www.mongoosemetrics.com/jsfiles/js-correlation/mm-control.php%3F' + mm_variables);
-var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mm, s);
-
-mm.onload = mm.onreadystatechange = (function() {
-    mm_logError('[custom] checking for mm_cc cookie');
-
-var mm_cc = get_c('mm_cc',null);
-
-if (!mm_cc) {
-    var url_cc = getURLVar('mm_campaign');
-    mm_logError('[custom] no mm_cc cookie found, setting to:'+url_cc);
-    set_c('mm_cc', url_cc, 720);
-    mm_cc = url_cc;
-} else {
-    mm_logError('[custom] mm_cc cookie found: '+mm_cc);
-
+ 
+<script>
+(function(m, o, n, g, j, s){m['MongMObject'] = j; m[j] = m[j] || function(){
+(m[j].q = m[j].q || []).push(arguments)}, d = 1 * new Date(); m[j].l = d; a = o.createElement(n),
+b = o.getElementsByTagName(n)[0]; a.async = 1; a.src = g + '?t=' + d; b.parentNode.insertBefore(a, b)
+})(window, document, 'script', '//www.mongoosemetrics.com/jsfiles/js-correlation/mm-engine.min.js', 'mm_options');
+mm_options('default_cc', MONGOOSE_CAMPAIGN_ID);
+mm_options('default_number', MONGOOSE_DEFAULT_NUMBER)
+ 
+mm_options('set_custom','1', MDMD_CONVERSION_TAG_ID);
+if(typeof usercookie !== "undefined"){
+mm_options('set_custom','2', usercookie);
 }
-
-mm_logError('[custom] mm_cc variable = '+mm_cc);
-
-var starttime = new Date().getTime();
-mm_logError('[custom] starting custom replacements at: '+starttime);
-
-custom_replace();
-
-var endtime = new Date().getTime();
-mm_logError('[custom] finished custom replacements at: '+endtime);
-
-function custom_replace() {
-    var ccfound = false;
-    switch (mm_cc) {
-
-  	// Day and Nite Pest Control
-    case "b53880e0dd163131e112572601bd2c11":
-            var ccfound = true;
-        replaceSingleRegex('8003296483', '844-494-7972');
-        replaceSingle('1-800-DAY-NITE', '844-494-7972');
-
-        break;
-    case "8de84accc01f9a3247b2abdb20ff215e":
-            var ccfound = true;
-        replaceSingleRegex('8003296483', '844-494-7973');
-        replaceSingleRegex('800DAYNITE', '844-494-7973');
-        break;
-// END Day and Nite Pest Control
-
-  mm_logError(mm_cc+' was not found, no replacement occured');
-    }
-    if (ccfound) {
-        mm_logError (mm_cc+' found, doing replacement');
-    }
-}
-		});
-})();
+ 
+mm_options('enable_integration','optimizely','3');
+// mm_options('enable_session');  //Enable Session
+mm_options('execute');
 </script>
 
 <!-- End Mongoose Metrics Tracking Code -->
